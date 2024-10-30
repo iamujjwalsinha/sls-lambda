@@ -1,4 +1,4 @@
-name: Deploy sls-lambda
+name: Deploy through github actions to AWS
 
 on:
   push:
