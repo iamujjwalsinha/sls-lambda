@@ -1,0 +1,23 @@
+service: sls-lambda
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: ${opt:stage, 'dev'}
+  region: ap-south-1
+
+functions:
+  hello:
+    handler: index.handler
+    events:
+      - http:
+          path: /
+          method: get
+
+package:
+  patterns:
+    - '!node_modules/**'
+    - '!.git/**'
+    - '!.github/**'
+    - index.js
