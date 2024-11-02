@@ -9,6 +9,7 @@
   "author": "Ujjwal Sinha",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^29.7.0",
     "serverless-iam-roles-per-function": "^3.2.0"
   }
 }
